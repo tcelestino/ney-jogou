@@ -31,6 +31,7 @@ async function init() {
     others = normalizeMatches(await othersRes.json());
   } catch (err) {
     console.error("Erro ao carregar jogos:", err);
+    document.getElementById("loading").style.display = "none";
     return;
   }
 
@@ -43,6 +44,9 @@ async function init() {
   renderLastGame(lastPlayedMatch);
   renderGameList("tournament-list", worldCup, nextMatch);
   renderGameList("others-list", others, nextMatch);
+
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("games-section").hidden = false;
 
   if (nextMatch) {
     startCountdown(nextMatch);

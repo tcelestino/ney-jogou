@@ -44,6 +44,11 @@
         </div>
       </div>
 
+      <div id="loading" role="status" aria-label="Carregando dados dos jogos">
+        <span class="loading-ball">⚽</span>
+        <span class="loading-text">Carregando jogos...</span>
+      </div>
+
       <section
         id="next-game"
         class="card next-game"
@@ -81,7 +86,7 @@
         </div>
       </section>
 
-      <section class="card" aria-label="Todos os jogos">
+      <section id="games-section" class="card" aria-label="Todos os jogos" hidden>
         <div class="card-label">Todos os Jogos</div>
         <div id="tournament-section">
           <div class="category-label">Copa</div>
