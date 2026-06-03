@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-06-13",
+    "schedule": "19:00",
+    "stage": "Rodada 1",
+    "city": "Nova Jersey",
+    "home": "Brasil",
+    "away": "Marrocos"
+  },
+  {
+    "date": "2026-06-19",
+    "schedule": "21:30",
+    "stage": "Rodada 2",
+    "city": "Filadélfia",
+    "home": "Brasil",
+    "away": "Haiti"
+  },
+  {
+    "date": "2026-06-24",
+    "schedule": "19:00",
+    "stage": "Rodada 3",
+    "city": "Miami",
+    "home": "Escócia",
+    "away": "Brasil"
+  }
+]

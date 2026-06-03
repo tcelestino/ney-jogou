@@ -1,0 +1,283 @@
+:root {
+  --bg: #0d2e0d;
+  --bg-card: #152515;
+  --bg-card2: #1a2a05;
+  --border: #2a5a2a;
+  --border2: #4a5a10;
+  --text: #d0f8d0;
+  --muted: #6a9a6a;
+  --green: #6ded91;
+  --yellow: #ebe133;
+  --red: #f87171;
+  --future: #3a6a3a;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5fef5;
+    --bg-card: #ffffff;
+    --bg-card2: #fefef0;
+    --border: #b7f0c4;
+    --border2: #e8e080;
+    --text: #1a3a1a;
+    --muted: #5a7a5a;
+    --green: #1a9e40;
+    --yellow: #9a8e00;
+    --red: #dc2626;
+    --future: #8aa08a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.hero {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  min-height: 280px;
+  border: 1px solid var(--border);
+}
+
+.hero img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.94));
+  padding: 2.5rem 1.25rem 1.1rem;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: var(--green);
+  line-height: 1;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(220, 255, 220, 0.7);
+  margin-top: 0.35rem;
+}
+
+.photo-credit {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2px 7px;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem;
+  margin-bottom: 1.1rem;
+  background: var(--bg-card);
+}
+
+.card.next-game {
+  border-color: #c4b800;
+  background: #ebe133;
+}
+
+.card.next-game .card-label {
+  color: #5a4a00;
+}
+
+.card.next-game .game-info h2 {
+  color: #1a1500;
+}
+
+.card.next-game .game-info p {
+  color: #5a4a00;
+}
+
+.card.next-game .countdown .big {
+  color: #1a1500;
+}
+
+.card.next-game .countdown .sub {
+  color: #5a4a00;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.game-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.game-info h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.game-info p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+.countdown {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.countdown .big {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--yellow);
+  line-height: 1;
+}
+
+.countdown .sub {
+  font-size: 0.8rem;
+  color: var(--yellow);
+  margin-top: 0.2rem;
+}
+
+.played-badge {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.played-badge .big {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.played-badge .sub {
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.played-badge.yes .big,
+.played-badge.yes .sub {
+  color: var(--green);
+}
+
+.played-badge.no .big,
+.played-badge.no .sub {
+  color: var(--red);
+}
+
+.category-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.category-label:first-child {
+  margin-top: 0;
+}
+.category-label.others {
+  color: var(--yellow);
+}
+
+#tournament-section {
+  margin-bottom: 2rem;
+}
+
+.game-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.game-item .date {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 0.2rem;
+}
+
+.game-item .teams {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.status-yes {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.status-no {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.status-pending {
+  color: var(--yellow);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.status-future {
+  color: var(--future);
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--future);
+  margin-top: 1.5rem;
+  padding-bottom: 2rem;
+  line-height: 1.6;
+}

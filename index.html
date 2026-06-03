@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ney Jogou?</title>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Acompanhe se Neymar entrou em campo nos jogos da Seleção Brasileira em 2026."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://neymar-jogou.onrender.com" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neymar-jogou.onrender.com" />
+    <meta property="og:title" content="Ney Jogou?" />
+    <meta
+      property="og:description"
+      content="Acompanhe se Neymar entrou em campo nos jogos da Seleção Brasileira em 2026."
+    />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ney Jogou?" />
+    <meta
+      name="twitter:description"
+      content="Acompanhe se Neymar entrou em campo nos jogos da Seleção Brasileira em 2026."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="hero" role="banner">
+        <img src="minino-ney.jpg" alt="Menino Neymar" />
+        <span class="photo-credit" aria-hidden="true">
+          Foto: Ryan Pierse – FIFA/FIFA via Getty Images
+        </span>
+        <div class="hero-overlay">
+          <h1 class="hero-title">⚽ NEY JOGOU?</h1>
+          <p class="hero-sub">Acompanhe se Neymar entrou em campo</p>
+        </div>
+      </div>
+
+      <section
+        id="next-game"
+        class="card next-game"
+        aria-label="Próximo jogo"
+        hidden
+      >
+        <div class="card-label">Próximo Jogo</div>
+        <div class="game-row">
+          <div class="game-info">
+            <h2 id="next-teams"></h2>
+            <p id="next-details"></p>
+          </div>
+          <div
+            class="countdown"
+            aria-live="polite"
+            aria-label="Contagem regressiva para o próximo jogo"
+          >
+            <div id="countdown-value" class="big"></div>
+            <div class="sub">⏱ em breve</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="last-game" class="card" aria-label="Último jogo" hidden>
+        <div class="card-label">Último Jogo</div>
+        <div class="game-row">
+          <div class="game-info">
+            <h2 id="last-teams"></h2>
+            <p id="last-details"></p>
+          </div>
+          <div id="last-played-badge" class="played-badge">
+            <div class="big"></div>
+            <div class="sub"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" aria-label="Todos os jogos">
+        <div class="card-label">Todos os Jogos</div>
+        <div id="tournament-section">
+          <div class="category-label">Copa</div>
+          <div id="tournament-list"></div>
+        </div>
+
+        <div id="others-section">
+          <div class="category-label others">Amistosos</div>
+          <div id="others-list"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
