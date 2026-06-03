@@ -120,10 +120,10 @@ function renderGameList(containerId, matches, nextMatch) {
       `${match.home} versus ${match.away}, ${formatDate(match.date)}`,
     );
     item.innerHTML = `
-      <div>
-        <div class="date">${formatDate(match.date)}${match.stage ? " · " + match.stage : ""}</div>
-        <div class="teams">${withFlag(match.home)} × ${withFlag(match.away)}</div>
-      </div>
+      <dl>
+        <dt class="date">${formatDate(match.date)}${match.stage ? " · " + match.stage : ""}</dt>
+        <dd class="teams">${withFlag(match.home)} × ${withFlag(match.away)}</dd>
+      </dl>
       <span class="${statusClass}" aria-live="polite">${statusText}</span>
     `;
     container.appendChild(item);
