@@ -6,18 +6,24 @@ Site estático que acompanha se Neymar entrou em campo nos jogos da Seleção Br
 
 ```
 ney-jogou/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── data/
 │   ├── world-cup.json   ← jogos da Copa do Mundo 2026
 │   └── others.json      ← amistosos
-├── src/
+├── images/
+│   ├── minino-ney.jpg
+│   └── og.png
+├── js/
+│   ├── app.js
 │   └── matches.js       ← lógica pura (normalização, ordenação, countdown)
 ├── tests/
 │   └── unit/
 │       └── matches.test.js
 ├── index.html
 ├── style.css
-├── app.js
-└── neymar_2.jpg
+└── vitest.config.js
 ```
 
 ## Formato dos dados
