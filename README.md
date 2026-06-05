@@ -72,17 +72,8 @@ Editar o JSON do jogo correspondente e adicionar o campo `played`:
 npm test
 
 # Visualizar localmente (qualquer servidor estático)
-npx serve .
+npm run dev
 ```
-
-## Deploy
-
-O projeto é um site estático — funciona em qualquer host gratuito:
-
-- **GitHub Pages:** habilitar nas configurações do repositório (branch `main`, raiz `/`)
-- **Netlify:** conectar o repositório, sem build command, publish directory `.`
-- **Vercel:** conectar o repositório, framework "Other"
-- **Render.com:** conectar o repositório
 
 ## Crédito da foto
 
