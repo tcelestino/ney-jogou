@@ -6,6 +6,7 @@
     "node": ">=26.0.0"
   },
   "scripts": {
+    "dev": "npx serve .",
     "test": "vitest run"
   },
   "devDependencies": {
