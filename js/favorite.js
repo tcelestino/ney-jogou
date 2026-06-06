@@ -30,15 +30,13 @@ export function initFavorite() {
     if (e.target === $dialog) $dialog.close();
   });
 
-  const $fabTitle = $fab.querySelector("#favorite-title");
+  const $dialogTitle = $dialog.querySelector("#favorite-title");
 
-  if ($fabTitle) {
-    const title = getTitle(isTouch);
-    $fabTitle.textContent = title;
+  if ($dialogTitle) {
+    $dialogTitle.textContent = getTitle(isTouch);
   }
 
   $fab.addEventListener("click", (e) => {
     $dialog.showModal();
-    $dialog.querySelector(".dialog-close").focus();
   });
 }
