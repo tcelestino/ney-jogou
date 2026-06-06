@@ -274,7 +274,9 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #loading {
@@ -305,4 +307,122 @@ footer {
   margin-top: 1.5rem;
   padding-bottom: 2rem;
   line-height: 1.6;
+}
+
+.fab-favorite {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.125rem;
+  min-height: 44px;
+  background: var(--green);
+  color: var(--bg);
+  border: none;
+  border-radius: 24px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  text-decoration: none;
+}
+
+.fab-favorite:hover {
+  filter: brightness(1.1);
+}
+
+.fab-favorite:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.dialog-favorite {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  width: calc(100% - 1rem);
+  max-width: 320px;
+  text-align: center;
+}
+
+.dialog-favorite::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.dialog-favorite h2 {
+  color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.625rem;
+}
+
+.dialog-icon {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dialog-body {
+  color: var(--text);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.dialog-body kbd {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.125rem 0.4375rem;
+  color: var(--green);
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.dialog-close {
+  width: 100%;
+  min-height: 44px;
+  background: var(--green);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  filter: brightness(1.1);
+}
+
+.dialog-close:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1025px) {
+  .dialog-favorite {
+    max-width: 400px;
+  }
+
+  .dialog-favorite h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .fab-favorite,
+  .dialog-close {
+    color: #000000;
+  }
 }
