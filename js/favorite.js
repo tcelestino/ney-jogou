@@ -4,6 +4,7 @@ export function getTitle(isTouch) {
   }
   return "Salvar nos Favoritos";
 }
+
 export function getModalInstruction(isTouch) {
   if (isTouch) {
     return 'Toque em <strong>Compartilhar</strong> (⬆) e depois em <strong>"Adicionar à Tela de Início"</strong> para salvar esta página.';
@@ -14,25 +15,30 @@ export function getModalInstruction(isTouch) {
 export function initFavorite() {
   const isTouch = window.matchMedia("(pointer: coarse)").matches;
   const instruction = getModalInstruction(isTouch);
+  const $dialog = document.querySelector(".dialog-favorite");
+  const $fab = document.querySelector(".fab-favorite");
 
-  const dialog = document.querySelector(".dialog-favorite");
-  const dialogBody = document.querySelector(".dialog-body");
-  dialogBody.innerHTML = instruction;
-
-  dialog.addEventListener("click", (e) => {
-    if (e.target === dialog) dialog.close();
-  });
-
-  const fab = document.querySelector(".fab-favorite");
-  const fabTitle = document.querySelector("#favorite-title");
-
-  if (fabTitle) {
-    const title = getTitle(isTouch);
-    fabTitle.textContent = title;
+  if (!$dialog || !$fab) {
+    console.error(`Elementos não encontrados: dialog=${$dialog}, fab=${$fab}`);
+    return;
   }
 
-  fab.addEventListener("click", (e) => {
-    dialog.showModal();
-    dialog.querySelector(".dialog-close").focus();
+  const $dialogBody = $dialog.querySelector(".dialog-body");
+  $dialogBody.innerHTML = instruction;
+
+  $dialog.addEventListener("click", (e) => {
+    if (e.target === $dialog) $dialog.close();
+  });
+
+  const $fabTitle = $fab.querySelector("#favorite-title");
+
+  if ($fabTitle) {
+    const title = getTitle(isTouch);
+    $fabTitle.textContent = title;
+  }
+
+  $fab.addEventListener("click", (e) => {
+    $dialog.showModal();
+    $dialog.querySelector(".dialog-close").focus();
   });
 }
