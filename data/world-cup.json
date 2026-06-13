@@ -5,7 +5,8 @@
     "stage": "Rodada 1",
     "city": "Nova Jersey",
     "home": "Brasil",
-    "away": "Marrocos"
+    "away": "Marrocos",
+    "played": false
   },
   {
     "date": "2026-06-19",
