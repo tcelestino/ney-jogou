@@ -4,6 +4,7 @@
     "schedule": "19:00",
     "stadium": "Cleveland Browns Stadium",
     "home": "Brasil",
-    "away": "Egito"
+    "away": "Egito",
+    "played": false
   }
 ]
