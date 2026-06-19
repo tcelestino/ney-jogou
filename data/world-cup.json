@@ -14,7 +14,8 @@
     "stage": "Rodada 2",
     "city": "Filadélfia",
     "home": "Brasil",
-    "away": "Haiti"
+    "away": "Haiti",
+    "played": false
   },
   {
     "date": "2026-06-24",
