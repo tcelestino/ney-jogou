@@ -23,6 +23,7 @@
     "stage": "Rodada 3",
     "city": "Miami",
     "home": "Escócia",
-    "away": "Brasil"
+    "away": "Brasil",
+    "played": true
   }
 ]
