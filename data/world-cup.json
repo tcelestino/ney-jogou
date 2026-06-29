@@ -25,5 +25,14 @@
     "home": "Escócia",
     "away": "Brasil",
     "played": true
+  },
+  {
+    "date": "2026-06-29",
+    "schedule": "14:00",
+    "stage": "16-avos de final",
+    "city": "Houston",
+    "home": "Brasil",
+    "away": "Japão",
+    "played": false
   }
 ]
