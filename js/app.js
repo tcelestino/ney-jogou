@@ -12,6 +12,7 @@ const FLAGS = {
   Haiti: "🇭🇹",
   Escócia: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
   Egito: "🇪🇬",
+  Japão: "🇯🇵",
 };
 
 function withFlag(name) {
