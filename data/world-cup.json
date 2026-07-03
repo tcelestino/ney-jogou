@@ -41,6 +41,7 @@
     "stage": "Oitavas de final",
     "city": "Nova York/Nova Jersey",
     "home": "Brasil",
-    "away": "Noruega"
+    "away": "Noruega",
+    "played": false
   }
 ]
