@@ -34,5 +34,13 @@
     "home": "Brasil",
     "away": "Japão",
     "played": false
+  },
+  {
+    "date": "2026-07-05",
+    "schedule": "17:00",
+    "stage": "Oitavas de final",
+    "city": "Nova York/Nova Jersey",
+    "home": "Brasil",
+    "away": "Noruega"
   }
 ]
