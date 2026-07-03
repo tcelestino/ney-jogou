@@ -13,6 +13,7 @@ const FLAGS = {
   Escócia: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
   Egito: "🇪🇬",
   Japão: "🇯🇵",
+  Noruega: "🇳🇴",
 };
 
 function withFlag(name) {
