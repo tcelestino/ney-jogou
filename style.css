@@ -45,6 +45,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 2rem 1.25rem;
+  overflow: hidden;
 }
 
 .container {
@@ -309,38 +310,7 @@ footer {
   line-height: 1.6;
 }
 
-.fab-favorite {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.125rem;
-  min-height: 44px;
-  background: var(--green);
-  color: var(--bg);
-  border: none;
-  border-radius: 24px;
-  font-size: 0.875rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  text-decoration: none;
-}
-
-.fab-favorite:hover {
-  filter: brightness(1.1);
-}
-
-.fab-favorite:focus-visible {
-  outline: 2px solid var(--text);
-  outline-offset: 2px;
-}
-
-.dialog-favorite {
+.dialog-farewell {
   position: fixed;
   inset: 0;
   margin: auto;
@@ -353,11 +323,11 @@ footer {
   text-align: center;
 }
 
-.dialog-favorite::backdrop {
+.dialog-farewell::backdrop {
   background: rgba(0, 0, 0, 0.65);
 }
 
-.dialog-favorite h2 {
+.dialog-farewell h2 {
   color: var(--green);
   font-size: 1.2rem;
   font-weight: 800;
@@ -388,17 +358,13 @@ footer {
   font-size: 0.875rem;
 }
 
-.dialog-close {
-  width: 100%;
-  min-height: 44px;
-  background: var(--green);
-  color: var(--bg);
+.see-soon {
+  color: var(--yellow);
   border: none;
   border-radius: 8px;
-  font-size: 0.9375rem;
+  font-size: 2rem;
   font-weight: 800;
-  letter-spacing: 1px;
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .dialog-close:hover {
@@ -411,17 +377,16 @@ footer {
 }
 
 @media (min-width: 1025px) {
-  .dialog-favorite {
+  .dialog-farewell {
     max-width: 400px;
   }
 
-  .dialog-favorite h2 {
+  .dialog-farewell h2 {
     font-size: 1.5rem;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  .fab-favorite,
   .dialog-close {
     color: #000000;
   }
