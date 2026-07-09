@@ -4,7 +4,7 @@ import {
   getNextMatch,
   getLastPlayedMatch,
 } from "./matches.js";
-import { initFavorite } from "./favorite.js";
+import { initFarewell } from "./farewell.js";
 
 const FLAGS = {
   Brasil: "🇧🇷",
@@ -51,7 +51,7 @@ async function init() {
   document.getElementById("loading").style.display = "none";
   document.getElementById("games-section").hidden = false;
 
-  initFavorite();
+  initFarewell();
 
   if (nextMatch) {
     startCountdown(nextMatch);

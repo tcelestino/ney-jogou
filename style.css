@@ -45,6 +45,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 2rem 1.25rem;
+  overflow: hidden;
 }
 
 .container {
@@ -340,7 +341,8 @@ footer {
   outline-offset: 2px;
 }
 
-.dialog-favorite {
+.dialog-favorite,
+.dialog-farewell {
   position: fixed;
   inset: 0;
   margin: auto;
@@ -353,11 +355,13 @@ footer {
   text-align: center;
 }
 
-.dialog-favorite::backdrop {
+.dialog-favorite::backdrop,
+.dialog-farewell::backdrop {
   background: rgba(0, 0, 0, 0.65);
 }
 
-.dialog-favorite h2 {
+.dialog-favorite h2,
+.dialog-farewell h2 {
   color: var(--green);
   font-size: 1.2rem;
   font-weight: 800;
@@ -388,17 +392,13 @@ footer {
   font-size: 0.875rem;
 }
 
-.dialog-close {
-  width: 100%;
-  min-height: 44px;
-  background: var(--green);
-  color: var(--bg);
+.see-soon {
+  color: var(--yellow);
   border: none;
   border-radius: 8px;
-  font-size: 0.9375rem;
+  font-size: 2rem;
   font-weight: 800;
-  letter-spacing: 1px;
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .dialog-close:hover {
@@ -411,11 +411,13 @@ footer {
 }
 
 @media (min-width: 1025px) {
-  .dialog-favorite {
+  .dialog-favorite,
+  .dialog-farewell {
     max-width: 400px;
   }
 
-  .dialog-favorite h2 {
+  .dialog-favorite h2,
+  .dialog-farewell h2 {
     font-size: 1.5rem;
   }
 }
